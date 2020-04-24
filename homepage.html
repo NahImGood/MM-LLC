@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link rel = "stylesheet"  type = "text/css" href = "css/carosell-css.css" />
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+#rcorners1 {
+  border-radius: 25px;
+  background: #73AD21;
+  padding: 20px;
+}
+
+.logoimage{
+    max-width:450px;
+    max-height:450px;
+}
+/* Header logo Image */
+.headerButtons {
+  max-height:110px;
+  max-width:110px;
+}
+/* Solutions, events and contact image */
+.infoImageSizer{
+   max-height:100%;
+   max-width:100%;
+   border-radius: 60px;
+   padding: 20px;
+   margin: 0 auto
+}
+
+.infoImageSizerNoBorder{
+   max-height:100%;
+   max-width:100%;
+   padding: 30px;
+   margin: 0 auto;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* w3-contaner mock */
+.container {
+  position: relative;
+  text-align: center;
+  color: black;
+}
+/* Text solution settings */
+.solutionText {
+  text-align:center;
+  color:black;
+}
+
+.logoBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(230px, 1fr));
+}
+
+div.logoContainer {
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+
+}
+div.logoContainer img {
+  max-height: 75px;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+}
+
+</style>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-wide"><img style="max-height:75px; max-width:275px;" src="magic-money-logo-horizontal.png" ></img></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#solution" class="w3-bar-item w3-button headerButtons" ><i class="far fa-lightbulb"></i> SOLUTIONS</a>
+      <a href="#events" class="w3-bar-item w3-button headerButtons"><i class="fa fa-calendar"></i> EVENTS</a>
+      <a href="#contact" class="w3-bar-item w3-button headerButtons"><i class="fa fa-envelope"></i> CONTACT</a>
+      <a href="#solution" class="w3-bar-item w3-button" style="width:250px" ><i class="fa fa-user"></i><br> Event Management Sign In</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">SOLUTIONS</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">EVENTS</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  <a href="#solution" class="w3-bar-item w3-button" style="width:250px" ><i class="fa fa-user"></i> Event Management Sign In</a>
+
+</nav>
+
+<!-- Header with full-height image -->
+<header id="home" style="padding-top:100px;">
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade" style="height:600px">
+      <img src="pics/edc-at-night.jpg" style="object-fit: cover;width:100%;height:600px">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="pics/mid-state-fair.jpg" style="object-fit: cover;width:100%;height:600px">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="pics/zoo-kiosk.JPG" style="object-fit: cover;width:100%;height:600px">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+  <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </div>
+
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</header>
+
+
+  <!-- <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div> -->
+
+
+<!-- About Section -->
+<div class="w3-container" style="padding:25px 16px" id="about">
+  <h3 class="w3-center">ABOUT THE COMPANY</h3>
+  <p class="w3-center w3-large">Magic Money digital ticketing events are the solution
+for your business</p>
+
+  <div class=" w3-center" style="margin-top:64px">
+
+    <div class="w3-third">
+      <div class="container" href="">
+        <p class="w3-xxlarge">Solutions
+        <img class="infoImageSizer" src="pics/dashapp.png"></img>
+        </p>
+      </div>
+    </div>
+
+    <div class="w3-third">
+      <div class="container" href="">
+        <p class="w3-xxlarge">Events <br>
+        <img class="infoImageSizerNoBorder" src="pics/event-tent.png"></img>
+        </p>
+      </div>
+    </div>
+
+    <div class="w3-third">
+      <div class="container" href="">
+        <p class="w3-xxlarge">Contact
+        <img class="infoImageSizer" src="magic-money-logo.png"></img>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Team Section -->
+<div class="w3-container w3-light-grey" style="padding:25px 16px" id="team">
+  <h3 class="w3-center">Our Partners</h3>
+  <div>
+    <div class="logoContainer">
+      <img src="partner-logos/great-america-food-logo.png">
+      <img src="partner-logos/helm-and-sons-logo.jpg">
+      <img src="partner-logos/martini-blu-logo.jpg">
+      <img src="partner-logos/talley-amusements-logo.jfif">
+      <img src="partner-logos/crabtree logo.jpg">
+      <img src="partner-logos/DWP-logo.jpg">
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:25px 16px" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+  <div style="margin-top:48px">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    <br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+    <!-- Image of location/map -->
+    <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+
+<script>
+// slide show
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
